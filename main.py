@@ -10,3 +10,4 @@ def play(word):
   guessed = False
   guessed_letters = []
   guessed_words = []
+  tries = 5
