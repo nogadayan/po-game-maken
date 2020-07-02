@@ -7,3 +7,6 @@ def get_word():
 
 def play(word):
   word_completion = "-" * len(word)
+  guessed = False
+  guessed_letters = []
+  guessed_words = []
