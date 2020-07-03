@@ -10,7 +10,7 @@ def play(word):
   guessed = False
   guessed_letters = []
   guessed_words = []
-  tries = 5
+  tries = 6
   print("Let's play hangman!")
   print(display_hangman(tries))
   print(word_completion)
@@ -53,6 +53,74 @@ def play(word):
     print("Congratulations! You've guessed the word! You've won the game!")
   else: 
     print("Sorry, you ran out of tries! The correct word was " + word + ". Maybe next time...")
+
+def display_hangman(tries):
+    stages = [
+                """
+                   --------
+                   |      |
+                   |      O
+                   |     \\|/
+                   |      |
+                   |     / \\
+                   -
+                """,
+                """
+                   --------
+                   |      |
+                   |      O
+                   |     \\|/
+                   |      |
+                   |     / 
+                   -
+                """,
+                """
+                   --------
+                   |      |
+                   |      O
+                   |     \\|/
+                   |      |
+                   |      
+                   -
+                """,
+                """
+                   --------
+                   |      |
+                   |      O
+                   |     \\|
+                   |      |
+                   |     
+                   -
+                """,
+                """
+                   --------
+                   |      |
+                   |      O
+                   |      |
+                   |      |
+                   |     
+                   -
+                """,
+                """
+                   --------
+                   |      |
+                   |      O
+                   |    
+                   |      
+                   |     
+                   -
+                """,
+                """
+                   --------
+                   |      |
+                   |      
+                   |    
+                   |      
+                   |     
+                   -
+                """
+    ]
+    return stages[tries]
 
 
 def main():
