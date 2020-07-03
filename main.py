@@ -4,7 +4,7 @@ from words import word_list
 
 def get_word():
     word = random.choice(word_list)
-   return word.upper()
+    return word.upper()
 
 
 def play(word):
@@ -52,9 +52,10 @@ def play(word):
         print(word_completion)
         print("\n")
     if guessed:
-        print("Congratulations! You've guessed the word! You've won the game!")
-    else: 
-        print("Sorry, you ran out of tries! The correct word was " + word + ". Maybe next time...")
+        print("Congratulations, you guessed the correct word! You won the game!")
+    else:
+        print("Sorry, you ran out of tries. The word was " + word + ". Maybe next time!")
+
 
 
 def display_hangman(tries):
