@@ -127,13 +127,13 @@ def display_hangman(tries):
 
 
 def main():
-  word = get_word()
-  play(word)
-  while input("Would you like to play again? (Y/N) ").upper == "Y":
     word = get_word()
     play(word)
+    while input("Would you like to play again? (Y/N) ").upper == "Y":
+        word = get_word()
+        play(word)
 
 
 if __name__ == "__main__":
-  main()
+    main()
  
