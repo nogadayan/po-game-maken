@@ -55,11 +55,7 @@ def play(word):
     print("Sorry, you ran out of tries! The correct word was " + word + ". Maybe next time...")
 
 
-
-
-
-
-  def display_hangman(tries):
+def display_hangman(tries):
     stages = [  """
                     --------
                     |       |
@@ -115,3 +111,15 @@ def play(word):
                     -
     ]
     return stages[tries]
+
+
+def main():
+  word = get_word()
+  play(word)
+  while input("Would you like to play again? (Y/N) ").upper == "Y":
+    word = get_word()
+    play(word)
+
+
+if __name__ == "__main__":
+  main()
